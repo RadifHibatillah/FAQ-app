@@ -1,0 +1,143 @@
+/* =============== GOOGLE FONTS =============== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* =============== RESET BROWSER =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffe259 0%, #faa0e8 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+/* =============== KONTAINER =============== */
+
+.accordion-container {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.accordion-header {
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #faa0e8 0%, #fecfef 100%);
+  transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: linear-gradient(135deg, #fecfef 0%, #ff9a9e 100%);
+}
+
+.accordion-header h3 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.accordion-header .icon {
+  transition: transform 0.3s ease;
+}
+
+.accordion-header .active .icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0.5px 1rem;
+  background: linear-gradient(135deg, #ffffffcc 0%, #ffffffaa 100%);
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content p {
+  padding: 1rem 0;
+  color: #555;
+  line-height: 1.5;
+}
+.accordion-content.open {
+  max-height: 500px;
+}
+
+/* =============== FOOTER =============== */
+.footer {
+  margin-top: auto;
+  width: 100vw;
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  text-align: center;
+  color: #333;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__author {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.footer__social a {
+  margin: 0rem 0.5rem;
+  font-size: 1.4rem;
+  transition: color 0.2s ease;
+}
+
+.footer__social a:hover {
+  color: #fa709a;
+}
+
+/* =============== MEDIA QUERIES =============== */
+
+@media (max-width: 480px) {
+  .accordion-header h3 {
+    font-size: 1rem;
+  }
+
+  .accordion-container {
+    padding: 0.5rem;
+  }
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .accordion-header h3 {
+    font-size: 1.05rem;
+  }
+  .footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .accordion-container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1025px) {
+  .accordion-container {
+    max-width: 600px;
+  }
+}
